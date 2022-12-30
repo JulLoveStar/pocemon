@@ -1,0 +1,279 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/*themes*/
+
+:root {
+  --background: #fff;
+  --primary-color: #2D3436;
+  --button-color: #A7CBD9;
+  --sidebar-color: #A7CBD9;
+  --border-color: #A7CBD9;
+  --settings-color: #202020;
+}
+
+[data-theme="dark"] {
+  --background: #202020;
+  --primary-color: #f2f3f4;
+  --button-color: #595BD9;
+  --sidebar-color: #595BD9;
+  --border-color: #595BD9;
+  --settings-color: #f2f3f4;
+}
+
+/*Auth Page*/
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+
+.wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.auth-input {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 10px;
+  color: #c2c2c2;
+}
+
+.input-text{ 
+  padding-left: 5rem;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid #CACACA;
+  width: 400px;
+  margin: 10px;
+  height: 30px;
+  color: var(--primary-color);
+  
+  padding: 5px 1rem;
+}
+.btn{
+  background-color: var(--button-color);
+  border: none;
+  cursor: pointer;
+  margin: 1rem 0;
+  height: 40px;
+  width: 150px;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: '800';
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*Header*/
+
+.header-btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin: 1rem;
+  width: 50px;
+  height: 30px;
+  color: #2D3436;
+  font-weight: 600;
+  transition: 0.2s ease-in;
+}
+
+.header-btn:hover {
+  background-color: #24A6D9;
+}
+
+/*About Page*/
+.pokemon-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--background);
+}
+
+.pokemon-card {
+  margin: 100px 20px;
+  padding: 1rem;
+  height: 200px;
+  width: 100px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+/*Auth Buttons*/
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.google-wrapper {
+  cursor: pointer;
+  width: 250px;
+  height: 35px;
+  background-color: #FF6347;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+
+.auth-btn {
+  width: 200px;
+  height: 35px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  background-color: inherit;
+  color: #202020;
+}
+
+.auth-error {
+  color: #FF6347;
+  line-height: 1px;
+  font-size: 10px;
+  text-align: center;
+}
+
+/*Settings*/
+
+.settings-btn {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  color: var(--settings-color);
+  left: 0;
+  top: 0;
+  margin: 2rem;
+}
+
+/*Sidebar*/
+
+.sidebar {
+  width: 9rem;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  background-color: var(--sidebar-color);
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.themes {
+  display: flex;
+  height: 50%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.theme-btn {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.sidebar-arrow {
+  font-size: 36px;
+  cursor: pointer;
+}
+
+
+.active {
+  opacity: 1;
+}
+
+.theme-switcher-about {
+  position: absolute;
+}
+
+/*Auth Need component*/
+
+.auth-need {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-need-text {
+  text-decoration: underline;
+}
+
+
+/*Media query*/
+
+@media (max-width: 576px) {
+
+  .container {
+    overflow: hidden;
+  }
+
+  form {
+    width: 300px;
+    padding: 2rem;
+    margin: auto;
+  }
+
+  .input-text {
+    width: 15rem;
+  }
+  .btn {
+    margin: 1rem 1rem 0;
+    width: 10rem;
+  }
+  .pokemon-wrapper {
+    height: 100vh;
+    overflow: auto;
+  }
+  .pokemon-card {
+    width: 4rem;
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+}
